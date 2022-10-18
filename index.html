@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BRchain</title>
+    <link rel="stylesheet" href="style.css"/>
+    <!-- <link rel="stylesheet" href="style2.css"/> -->
+</head>
+
+<body>
+    <form>
+        <!-- <fieldset class="grupo"> -->
+            <!-- Campo da Razão social -->
+            <div class="campo">
+                <label for="razao-social"><strong>Razão social</strong></label>
+                <input type="text" name="razao-social" id="razao-social" required />
+            </div>
+
+            <!-- Campo do CNPJ -->
+            <div class="campo">
+                <label for="cnpj"><strong>CNPJ</strong></label>
+                <input type="text" name="cnpj" id="cnpj" required />
+            </div>
+        <!-- </fieldset> -->
+
+        <!-- Campo do endereço -->
+        <div class="campo">
+            <label for="endereco"><strong>Endereço</strong></label>
+            <input type="text" name="endereco" id="endereco" required />
+        </div>
+       
+        <div class="campo">
+            <label for="email"><strong>Email</strong></label>
+            <input palceholder="" type="email" name="email" id="email" required />
+        </div>
+
+        <!-- Caixa... -->
+
+        <div class="campo">
+            <br>
+            <label for="assunto"><strong>Assunto</strong></label>
+            <input type="text" name="assunto" id="assunto" required />
+        </div>
+        <div class="campo">
+            <label for="..."><strong>Mensagem: </strong></label>
+            <textarea rows="6" style="width: 26em" id="..." name="..."></textarea>
+        </div>
+
+        <!-- Botão para enviar o formulário -->
+        <button class="botao" type="submit" onsubmit="">Concluído</button>
+    </form>
+    <!-- ======= Footer ======= -->
+    <footer id="footer">
+        <div class="container">
+            <div class="copyright">Todos os direitos reservados.</div>
+            <div class="credits">Desenvolvido por Equipe BRChain</div>
+        </div>
+    </footer>
+</body>
+
+</html>
