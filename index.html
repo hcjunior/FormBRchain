@@ -6,55 +6,129 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BRchain</title>
-    <link rel="stylesheet" href="style.css"/>
-    <!-- <link rel="stylesheet" href="style2.css"/> -->
+    <!-- <link rel="stylesheet" href="style.css"/> -->
+    <link rel="stylesheet" href="style2.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous" />
 </head>
 
-<body>
-    <form>
-        <!-- <fieldset class="grupo"> -->
-            <!-- Campo da Razão social -->
-            <div class="campo">
-                <label for="razao-social"><strong>Razão social</strong></label>
-                <input type="text" name="razao-social" id="razao-social" required />
+<body class="container">
+    <h1 class="text-center titulo">Contato</h1>
+
+    <div class="row justify-content-md-center">
+
+        <div class="col-lg-4 col-md-6">
+            <div class="contact-about">
+                <h3>BRChain</h3>
+                <p>
+                    Entre em contato conosco e conheça todas as vantagem em utilizar
+                    nossa rede Blockchain.
+                </p>
+                <div class="social-links">
+                    <a href="#" class="twitter"><i class="fi fi-brands-twitter"></i></a>
+                    <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+                    <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+                    <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+                </div>
             </div>
+        </div>
 
-            <!-- Campo do CNPJ -->
-            <div class="campo">
-                <label for="cnpj"><strong>CNPJ</strong></label>
-                <input type="text" name="cnpj" id="cnpj" required />
+        <div class="col-lg-3 col-md-6 mt-4 mt-md-0">
+            <div class="info">
+                <div>
+                    <i class="ri-map-pin-line"></i>
+                    <p>QE 10, Conjunto C<br />Brasilia/DF 71010-038</p>
+                </div>
+
+                <div>
+                    <i class="ri-mail-send-line"></i>
+                    <p>contato@brchain.com.br</p>
+                </div>
+
+                <div>
+                    <i class="ri-phone-line"></i>
+                    <p>+55 61 0000-0000</p>
+                </div>
             </div>
-        <!-- </fieldset> -->
-
-        <!-- Campo do endereço -->
-        <div class="campo">
-            <label for="endereco"><strong>Endereço</strong></label>
-            <input type="text" name="endereco" id="endereco" required />
-        </div>
-       
-        <div class="campo">
-            <label for="email"><strong>Email</strong></label>
-            <input palceholder="" type="email" name="email" id="email" required />
         </div>
 
-        <!-- Caixa... -->
+        <form class="col-md-auto">
+            <div>
+                
+                <!-- Campo da Nome -->
+                <div class="row mb-3">
+                    <label class="label-text" for="inputEmail4">Nome</label>
+                    <input type="email" id="inputEmail4" />
+                </div>
 
-        <div class="campo">
-            <br>
-            <label for="assunto"><strong>Assunto</strong></label>
-            <input type="text" name="assunto" id="assunto" required />
-        </div>
-        <div class="campo">
-            <label for="..."><strong>Mensagem: </strong></label>
-            <textarea rows="6" style="width: 26em" id="..." name="..."></textarea>
-        </div>
+                <!-- Campo PJ ou PF -->
+                <fieldset class="row mb-3">
+                    <label>Pessoa física ou pessoa jurídica</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="pf-pj" id="pf" value="opcao1" checked />
+                        <label class="form-check-label" for="pf">PF</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="pf-pj" id="pj" value="opcao2" />
+                        <label class="form-check-label" for="pj">PJ</label>
+                    </div>
+                </fieldset>
 
-        <!-- Botão para enviar o formulário -->
-        <button class="botao" type="submit" onsubmit="">Concluído</button>
-    </form>
+                <!-- Campo da Razão social -->
+                <div class="row mb-3">
+                    <label class="label-text" for="razao-social">Razão social</label>
+                    <input type="text" name="razao-social" id="razao-social" required />
+                </div>
+
+                <!-- Campo do CNPJ -->
+                <div class="row mb-3">
+                    <label class="label-text" for="cnpj">CNPJ</label>
+                    <input type="text" name="cnpj" id="cnpj" required />
+                </div>
+
+                <!-- Campo do endereço -->
+                <div class="row mb-3">
+                    <label class="label-text" for="endereco">Endereço</label>
+                    <input type="text" name="endereco" id="endereco" required />
+                </div>
+
+                <!-- Campo do telefone -->
+                <div class="row mb-3">
+                    <label class="label-text" for="telefone">Telefone</label>
+                    <input placeholder="(61) 1234-1234" type="tel" name="telefone" id="telefone" required />
+                </div>
+
+                <!-- Campo do email -->
+                <div class="row mb-3">
+                    <label class="label-text" for="email">Email</label>
+                    <input palceholder="" type="email" name="email" id="email" required />
+                </div>
+
+                <!-- Caixa assunto e mensagem -->
+                <div class="row mb-3">
+                    <br />
+                    <label class="label-text" for="assunto">Assunto</label>
+                    <input type="text" name="assunto" id="assunto" required />
+                </div>
+                <div class="row mb-3">
+                    <label class="label-text" for="mensagem">Mensagem</label>
+                    <textarea rows="6" id="mensagem" name="mensagem"></textarea>
+                </div>
+
+                <!-- Botão para enviar o formulário -->
+                <div class="text-center">
+                    <button class="botaoEnviar" type="submit" onsubmit="">
+                        Enviar mensagem
+                    </button>
+                </div>
+
+            </div>
+        </form>
+    </div>
+
     <!-- ======= Footer ======= -->
-    <footer id="footer">
-        <div class="container">
+    <footer class="text-center" id="footer">
+        <div class="row justify-content-center">
             <div class="copyright">Todos os direitos reservados.</div>
             <div class="credits">Desenvolvido por Equipe BRChain</div>
         </div>
