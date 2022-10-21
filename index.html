@@ -52,78 +52,95 @@
             </div>
         </div>
 
-        <form class="col-md-auto">
-            <div>
-                
-                <!-- Campo da Nome -->
-                <div class="row mb-3">
-                    <label class="label-text" for="inputEmail4">Nome</label>
-                    <input type="email" id="inputEmail4" />
-                </div>
+        <div class="col-md-auto">
 
-                <!-- Campo PJ ou PF -->
-                <fieldset class="row mb-3">
-                    <label>Pessoa física ou pessoa jurídica</label>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="pf-pj" id="pf" value="opcao1" checked />
-                        <label class="form-check-label" for="pf">PF</label>
+            <button type="button" class="botaoEnviar" onclick="formulario()">Adquira a Solução</button>
+            <form class="" id="form" style="visibility: hidden;">
+                <div>
+
+                    <!-- Campo PJ ou PF -->
+                    <fieldset class="row mb-3">
+                        <label>Pessoa física ou pessoa jurídica</label>
+                        <div class="form-check">
+                            <input onclick="checkPF()" class="form-check-input" type="radio" name="pf-pj" id="pf"
+                                value="opcao1" checked />
+                            <label class="form-check-label" for="pf">PF</label>
+                        </div>
+                        <div class="form-check">
+                            <input onclick="checkPJ()" class="form-check-input" type="radio" name="pf-pj" id="pj"
+                                value="opcao2" />
+                            <label class="form-check-label" for="pj">PJ</label>
+                        </div>
+                    </fieldset>
+
+                    <fieldset id="contatoPF">
+                        <!-- Campo da Nome -->
+                        <div class="row mb-3">
+                            <label class="label-text" for="nome">Nome</label>
+                            <input type="text" id="nome" />
+                        </div>
+
+                        <!-- Campo do CPF -->
+                        <div class="row mb-3">
+                            <label class="label-text" for="cpf">CPF</label>
+                            <input type="text" id="cpf" />
+                        </div>
+                    </fieldset>
+
+                    <fieldset id="contatoPJ" hidden>
+                        <!-- Campo da Razão social -->
+                        <div class="row mb-3">
+                            <label class="label-text" for="razao-social">Razão social</label>
+                            <input type="text" name="razao-social" id="razao-social" />
+                        </div>
+
+                        <!-- Campo do CNPJ -->
+                        <div class="row mb-3">
+                            <label class="label-text" for="cnpj">CNPJ</label>
+                            <input type="text" name="cnpj" id="cnpj" />
+                        </div>
+
+                        <!-- Campo do endereço -->
+                        <div class="row mb-3">
+                            <label class="label-text" for="endereco">Endereço</label>
+                            <input type="text" name="endereco" id="endereco" />
+                        </div>
+                    </fieldset>
+
+
+                    <!-- Campo do telefone -->
+                    <div class="row mb-3">
+                        <label class="label-text" for="telefone">Telefone</label>
+                        <input placeholder="(61) 1234-1234" type="tel" name="telefone" id="telefone" required />
                     </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="pf-pj" id="pj" value="opcao2" />
-                        <label class="form-check-label" for="pj">PJ</label>
+
+                    <!-- Campo do email -->
+                    <div class="row mb-3">
+                        <label class="label-text" for="email">Email</label>
+                        <input palceholder="" type="email" name="email" id="email" required />
                     </div>
-                </fieldset>
 
-                <!-- Campo da Razão social -->
-                <div class="row mb-3">
-                    <label class="label-text" for="razao-social">Razão social</label>
-                    <input type="text" name="razao-social" id="razao-social" required />
-                </div>
+                    <!-- Caixa assunto e mensagem -->
+                    <div class="row mb-3">
+                        <br />
+                        <label class="label-text" for="assunto">Assunto</label>
+                        <input type="text" name="assunto" id="assunto" required />
+                    </div>
+                    <div class="row mb-3">
+                        <label class="label-text" for="mensagem">Mensagem</label>
+                        <textarea rows="6" id="mensagem" name="mensagem"></textarea>
+                    </div>
 
-                <!-- Campo do CNPJ -->
-                <div class="row mb-3">
-                    <label class="label-text" for="cnpj">CNPJ</label>
-                    <input type="text" name="cnpj" id="cnpj" required />
-                </div>
+                    <!-- Botão para enviar o formulário -->
+                    <div class="text-center">
+                        <button class="botaoEnviar" type="submit" onsubmit="">
+                            Enviar mensagem
+                        </button>
+                    </div>
 
-                <!-- Campo do endereço -->
-                <div class="row mb-3">
-                    <label class="label-text" for="endereco">Endereço</label>
-                    <input type="text" name="endereco" id="endereco" required />
                 </div>
-
-                <!-- Campo do telefone -->
-                <div class="row mb-3">
-                    <label class="label-text" for="telefone">Telefone</label>
-                    <input placeholder="(61) 1234-1234" type="tel" name="telefone" id="telefone" required />
-                </div>
-
-                <!-- Campo do email -->
-                <div class="row mb-3">
-                    <label class="label-text" for="email">Email</label>
-                    <input palceholder="" type="email" name="email" id="email" required />
-                </div>
-
-                <!-- Caixa assunto e mensagem -->
-                <div class="row mb-3">
-                    <br />
-                    <label class="label-text" for="assunto">Assunto</label>
-                    <input type="text" name="assunto" id="assunto" required />
-                </div>
-                <div class="row mb-3">
-                    <label class="label-text" for="mensagem">Mensagem</label>
-                    <textarea rows="6" id="mensagem" name="mensagem"></textarea>
-                </div>
-
-                <!-- Botão para enviar o formulário -->
-                <div class="text-center">
-                    <button class="botaoEnviar" type="submit" onsubmit="">
-                        Enviar mensagem
-                    </button>
-                </div>
-
-            </div>
-        </form>
+            </form>
+        </div>
     </div>
 
     <!-- ======= Footer ======= -->
@@ -135,4 +152,49 @@
     </footer>
 </body>
 
+<script>
+    function formulario() {
+        var form = document.getElementById("form");
+        if (form.style.visibility == "hidden") {
+            form.style.visibility = "visible";
+        } else {
+            form.style.visibility = "hidden";
+        }
+    }
+
+    function checkPF() {
+        var contatoPF = document.getElementById("contatoPF");
+        var contatoPJ = document.getElementById("contatoPJ");
+        var nome = document.getElementById("nome");
+        var cpf = document.getElementById("cpf");
+        var razaoSocial = document.getElementById("razao-social");
+        var cnpj = document.getElementById("cnpj");
+        var endereco = document.getElementById("endereco");
+        nome.required = true;
+        cpf.required = true;
+        contatoPF.hidden = false;
+        razaoSocial.required = false;
+        cnpj.required = false;
+        endereco.required = false;
+        contatoPJ.hidden = true;
+    }
+
+    function checkPJ() {
+        var contatoPF = document.getElementById("contatoPF");
+        var contatoPJ = document.getElementById("contatoPJ");
+        var nome = document.getElementById("nome");
+        var cpf = document.getElementById("cpf");
+        var razaoSocial = document.getElementById("razao-social");
+        var cnpj = document.getElementById("cnpj");
+        var endereco = document.getElementById("endereco");
+        nome.required = false;
+        cpf.required = false;
+        contatoPF.hidden = true;
+        razaoSocial.required = true;
+        cnpj.required = true;
+        endereco.required = true;
+        contatoPJ.hidden = false;
+    }
+
+</script>
 </html>
